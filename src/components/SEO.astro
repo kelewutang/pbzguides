@@ -1,0 +1,30 @@
+---
+import { site } from '../config/site';
+import { absoluteUrl, serializeSchema } from '../lib/seo';
+export interface Props {
+  title?: string; description?: string; path: string; noindex?: boolean;
+  schema?: Record<string, unknown>; image?: string; imageAlt?: string;
+}
+const { title = site.defaultTitle, description = site.description, path, noindex = false, schema,
+  image = site.openGraph.image, imageAlt = site.openGraph.imageAlt } = Astro.props;
+const fullTitle = site.titleTemplate.replace('%s', title);
+const canonical = absoluteUrl(path);
+const alternates = site.alternates[path] ?? [];
+---
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
+{!noindex && <link rel="canonical" href={canonical} />}
+{!noindex && alternates.map(alternate => <link rel="alternate" hreflang={alternate.language} href={absoluteUrl(alternate.url)} />)}
+<meta property="og:site_name" content={site.name} />
+<meta property="og:type" content={site.openGraph.type} />
+<meta property="og:locale" content={site.openGraph.locale} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+{!noindex && <meta property="og:url" content={canonical} />}
+<meta name="twitter:card" content={site.social.card} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+{site.social.account && <meta name="twitter:site" content={site.social.account} />}
+{image && <><meta property="og:image" content={absoluteUrl(image)} /><meta name="twitter:image" content={absoluteUrl(image)} />{imageAlt && <><meta property="og:image:alt" content={imageAlt} /><meta name="twitter:image:alt" content={imageAlt} /></>}</>}
+{schema && <script type="application/ld+json" set:html={serializeSchema(schema)} />}

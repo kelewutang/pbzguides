@@ -1,0 +1,5 @@
+---
+import { site } from '../config/site';
+const { path } = Astro.props;
+---
+<header class="site-header wrap"><a class="brand" href="/">{site.name}</a><nav aria-label="Main navigation"><a href="/" aria-current={path === '/' ? 'page' : undefined}>Home</a><a href="/guides/" aria-current={path.startsWith('/guides/') ? 'page' : undefined}>Guides</a></nav></header>

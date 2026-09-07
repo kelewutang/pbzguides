@@ -1,0 +1,11 @@
+---
+import SEO, { type Props } from '../components/SEO.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { site } from '../config/site';
+import '../styles/global.css';
+interface LayoutProps extends Props {}
+const props: LayoutProps = Astro.props;
+---
+<!doctype html>
+<html lang={site.language}><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" /><SEO {...props} /></head><body><a class="skip-link" href="#main">Skip to content</a><SiteHeader path={props.path} /><main id="main" class="wrap" tabindex="-1"><slot /></main><SiteFooter /></body></html>

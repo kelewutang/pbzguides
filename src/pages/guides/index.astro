@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { pages } from '../../data/pages';
+import { publishedGuides, guidePath } from '../../lib/guides';
+const guides = await publishedGuides();
+---
+<BaseLayout {...pages.guides}><p class="eyebrow">The library</p><h1>Phantom Blade Zero guides</h1><p class="lede">English-language articles and practical reference for players.</p>{guides.length ? <div class="guide-list">{guides.map(guide => <GuideCard href={guidePath(guide.data.slug)} title={guide.data.title} description={guide.data.description} />)}</div> : <section class="empty"><h2>No guides published yet</h2><p>We are preparing the first articles. There are no walkthroughs or gameplay recommendations to browse yet.</p><a href="/">Return to PBZ Guides</a></section>}</BaseLayout>
