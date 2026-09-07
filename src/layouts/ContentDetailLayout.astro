@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentMetadata from '../components/ContentMetadata.astro';
+import type { ContentArea } from '../data/content-areas';
+import { contentAreas } from '../data/content-areas';
+import { contentPath } from '../lib/content';
+interface Props {
+  area: ContentArea;
+  title: string;
+  description: string;
+  slug: string;
+  seo?: { title?: string; description?: string };
+  evidenceStatus?: 'confirmed' | 'observed' | 'unverified';
+  lastVerified?: Date;
+  sources?: Array<{ label: string; url: string }>;
+  schema?: Record<string, unknown>;
+}
+const { area, title, description, slug, seo, evidenceStatus, lastVerified, sources, schema } = Astro.props;
+const details = contentAreas[area];
+const path = contentPath(area, slug);
+---
+<BaseLayout title={seo?.title ?? title} description={seo?.description ?? description} {schema} path={path}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: details.label, href: contentPath(area) }, { label: title }]} />
+  <article class="prose"><h1>{title}</h1><p class="lede">{description}</p><ContentMetadata {evidenceStatus} {lastVerified} {sources} /><slot /></article>
+</BaseLayout>

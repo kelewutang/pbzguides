@@ -1,0 +1,18 @@
+---
+import { render } from 'astro:content';
+import ContentDetailLayout from '../../layouts/ContentDetailLayout.astro';
+import { contentAreaKeys, type ContentArea } from '../../data/content-areas';
+import { publishedEntriesFor } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const paths = await Promise.all(contentAreaKeys.map(async (area) => (await publishedEntriesFor(area)).map((entry) => ({
+    params: { area, slug: entry.data.slug },
+    props: { area, entry },
+  }))));
+  return paths.flat();
+}
+
+const { area, entry } = Astro.props as { area: ContentArea; entry: Awaited<ReturnType<typeof publishedEntriesFor>>[number] };
+const { Content } = await render(entry);
+---
+<ContentDetailLayout area={area} {...entry.data}><Content /></ContentDetailLayout>

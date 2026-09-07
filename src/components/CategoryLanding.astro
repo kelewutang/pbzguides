@@ -1,0 +1,11 @@
+---
+import ContentCard from './ContentCard.astro';
+import type { ContentArea } from '../data/content-areas';
+import { contentAreas } from '../data/content-areas';
+import { contentPath } from '../lib/content';
+interface Props { area: ContentArea; entries: Array<{ data: { slug: string; title: string; description: string } }>; }
+const { area, entries } = Astro.props;
+const details = contentAreas[area];
+---
+<p class="eyebrow">The library</p><h1>{details.title}</h1><p class="lede">{details.description}</p>
+{entries.length ? <div class="guide-list">{entries.map((entry) => <ContentCard href={contentPath(area, entry.data.slug)} title={entry.data.title} description={entry.data.description} />)}</div> : <section class="empty"><h2>{details.emptyTitle}</h2><p>{details.emptyDescription}</p><a href="/">Return to PBZ Guides</a></section>}

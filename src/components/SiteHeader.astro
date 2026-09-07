@@ -2,4 +2,4 @@
 import { site } from '../config/site';
 const { path } = Astro.props;
 ---
-<header class="site-header wrap"><a class="brand" href="/">{site.name}</a><nav aria-label="Main navigation"><a href="/" aria-current={path === '/' ? 'page' : undefined}>Home</a><a href="/guides/" aria-current={path.startsWith('/guides/') ? 'page' : undefined}>Guides</a></nav></header>
+<header class="site-header wrap"><a class="brand" href="/">{site.name}</a><nav aria-label="Main navigation"><a href="/guides/" aria-current={path.startsWith('/guides/') ? 'page' : undefined}>Guides</a><a href="/weapons/" aria-current={path.startsWith('/weapons/') ? 'page' : undefined}>Weapons</a><a href="/bosses/" aria-current={path.startsWith('/bosses/') ? 'page' : undefined}>Bosses</a><a href="/combat/" aria-current={path.startsWith('/combat/') ? 'page' : undefined}>Combat</a><a href="/characters/" aria-current={path.startsWith('/characters/') ? 'page' : undefined}>Characters</a></nav></header>

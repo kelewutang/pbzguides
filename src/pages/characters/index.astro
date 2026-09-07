@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryLanding from '../../components/CategoryLanding.astro';
+import { publishedEntriesFor } from '../../lib/content';
+const entries = await publishedEntriesFor('characters');
+---
+<BaseLayout title="Characters" description="Browse the source-aware Phantom Blade Zero characters reference." path="/characters/"><CategoryLanding area="characters" {entries} /></BaseLayout>

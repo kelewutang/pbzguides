@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryLanding from '../../components/CategoryLanding.astro';
+import { publishedEntriesFor } from '../../lib/content';
+const entries = await publishedEntriesFor('combat');
+---
+<BaseLayout title="Combat" description="Browse the Phantom Blade Zero combat systems and mechanics reference." path="/combat/"><CategoryLanding area="combat" {entries} /></BaseLayout>

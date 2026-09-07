@@ -1,0 +1,17 @@
+---
+interface Source { label: string; url: string; }
+interface Props {
+  evidenceStatus?: 'confirmed' | 'observed' | 'unverified';
+  lastVerified?: Date;
+  sources?: Source[];
+}
+const { evidenceStatus, lastVerified, sources } = Astro.props;
+const evidenceLabels = { confirmed: 'Confirmed', observed: 'Observed', unverified: 'Unverified' };
+---
+{(evidenceStatus || lastVerified || sources?.length) && <section class="content-metadata" aria-label="Verification details">
+  <dl>
+    {evidenceStatus && <><dt>Evidence status</dt><dd>{evidenceLabels[evidenceStatus]}</dd></>}
+    {lastVerified && <><dt>Last verified</dt><dd><time datetime={lastVerified.toISOString()}>{lastVerified.toISOString().slice(0, 10)}</time></dd></>}
+  </dl>
+  {sources?.length && <section aria-labelledby="sources"><h2 id="sources">Sources</h2><ul>{sources.map((source) => <li><a href={source.url}>{source.label}</a></li>)}</ul></section>}
+</section>}

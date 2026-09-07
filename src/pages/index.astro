@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import GuideCard from '../components/GuideCard.astro';
+import ContentCard from '../components/ContentCard.astro';
 import { pages } from '../data/pages';
 import { site } from '../config/site';
 ---
 <BaseLayout {...pages.home} schema={{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, inLanguage: site.language }}>
 <section class="intro"><p class="eyebrow">Independent player reference</p><h1>Phantom Blade Zero<br /><span>Guides & reference</span></h1><p class="lede">An English-language guide library for Phantom Blade Zero.</p></section>
-<GuideCard href="/guides/" title="Explore the guide library" description="Our first guides are being prepared. Visit the library to see current coverage." />
+<ContentCard href="/guides/" title="Explore the guide library" description="Our first guides are being prepared. Visit the library to see current coverage." />
 <section class="editorial"><h2>Coverage you can check</h2><p>Our editorial approach is to cite sources, distinguish observations from confirmed information, and explain which version a guide covers.</p><p>The library is currently empty. We will add articles as they are researched and reviewed.</p></section>
 </BaseLayout>
