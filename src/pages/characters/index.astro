@@ -1,7 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CategoryLanding from '../../components/CategoryLanding.astro';
+import ContentCard from '../../components/ContentCard.astro';
 import { publishedEntriesFor } from '../../lib/content';
 const entries = await publishedEntriesFor('characters');
 ---
-<BaseLayout title="Characters" description="Browse the source-aware Phantom Blade Zero characters reference." path="/characters/"><CategoryLanding area="characters" {entries} /></BaseLayout>
+<BaseLayout title="Phantom Blade Zero Characters" description="Explore confirmed Phantom Blade Zero characters, starting with protagonist Soul, with official story details and future character profiles as more information is revealed." path="/characters/">
+  <article class="prose">
+    <p class="eyebrow">Characters hub</p>
+    <h1>Phantom Blade Zero Characters</h1>
+    <p class="lede">PBZ Guides tracks officially confirmed characters and keeps each profile within the details published by S-GAME and its official partners. Soul is the first published character profile.</p>
+
+    <h2>Confirmed character coverage</h2>
+    <p>Only source-aware profiles appear below. More characters will be added when their names, story context, and other relevant details can be confirmed through official material. This hub does not use placeholders or attempt to present an unrevealed full roster.</p>
+    <div class="guide-list">{entries.map((entry) => <ContentCard href={`/characters/${entry.data.slug}/`} title={entry.data.title} description={entry.data.description} />)}</div>
+
+    <h2>How character information is handled</h2>
+    <p>Pre-release character information can change or remain incomplete. Profiles distinguish confirmed public premises from unannounced relationships, progression systems, and story outcomes. The current Soul profile records the official 66-day premise and connection to The Order without adding unverified biography or lore.</p>
+  </article>
+</BaseLayout>
