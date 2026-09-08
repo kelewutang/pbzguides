@@ -1,7 +1,50 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CategoryLanding from '../../components/CategoryLanding.astro';
+import ContentCard from '../../components/ContentCard.astro';
 import { publishedEntriesFor } from '../../lib/content';
 const entries = await publishedEntriesFor('weapons');
 ---
-<BaseLayout title="Weapons" description="Browse the source-aware Phantom Blade Zero weapons reference." path="/weapons/"><CategoryLanding area="weapons" {entries} /></BaseLayout>
+<BaseLayout title="Phantom Blade Zero Weapons: Main Weapons & Phantom Edges" description="Explore the confirmed Phantom Blade Zero weapon system, including 30+ Main Weapons, 25 Phantom Edges, loadout structure, upgrades, reforging, and current official details." path="/weapons/">
+  <article class="prose">
+    <p class="eyebrow">Weapons hub</p>
+    <h1>Phantom Blade Zero Weapons</h1>
+    <p class="lede">The confirmed weapon system includes more than 30 Main Weapons, 25 Phantom Edges, and a battle loadout of two of each category. The complete official launch inventory is not yet public.</p>
+
+    <h2>Quick overview</h2>
+    <p><em>Phantom Blade Zero</em> separates its arsenal into Main Weapons and Phantom Edges. Main Weapons are the primary category and include melee and ranged options. Phantom Edges are the secondary category, described by S-GAME as less conventional weapons that broaden combat expression.</p>
+    <p>Official material says Soul can equip two Main Weapons and two Phantom Edges in battle. It also confirms weapon upgrades, accessories that can be paired with weapons to shape builds, and reforging that returns materials for reinvestment. These are pre-release details, so this hub records the published framework without treating it as a final weapon database.</p>
+
+    <h2>Main Weapons</h2>
+    <p>S-GAME currently confirms more than 30 Main Weapons. The official descriptions identify the main arsenal as a wide selection of melee and ranged weapons, but they do not yet publish a complete launch list, every weapon class, individual names, damage values, rarity, scaling, movesets, or upgrade trees.</p>
+    <p>That makes Main Weapons the broad primary layer of the system, rather than a finished catalogue for comparison or ranking. PBZ Guides will add individual weapon coverage only when it can be supported by official information or verified launch details.</p>
+
+    <h2>Phantom Edges</h2>
+    <p>S-GAME currently confirms 25 secondary weapons known as Phantom Edges. Two can be equipped alongside the two Main Weapons. The official framing presents them as unusual options with less conventional approaches to combat, not as a complete revealed list of spells, skills, or consumables.</p>
+    <p><a href="/weapons/phantom-edges/">Read the Phantom Edges overview</a> for the category's confirmed details, current sources, and the individual mechanics that have not yet been publicly specified.</p>
+
+    <h2>How many weapons can you equip?</h2>
+    <p>The supported loadout is two Main Weapons and two Phantom Edges. This establishes four equipped weapon slots across two distinct categories. Official sources reviewed for this hub do not define the exact switching inputs, whether every equipped weapon can be cycled instantly, simultaneous activation rules, cooldowns, or resource costs, so those details are not inferred.</p>
+
+    <h2>Weapon upgrades and reforging</h2>
+    <p>The official State of Play deep dive says weapons can be upgraded. It also says that an upgraded weapon can be reforged, returning its materials so they can be reinvested in another weapon. This describes a broad upgrade and material-recovery system, not a published list of materials, caps, rarity tiers, stat trees, or cost formulas.</p>
+
+    <h2>Accessories and builds</h2>
+    <p>S-GAME says players can pair weapons with different accessories to create the build they want. That confirms accessories as part of the broader equipment system, but the reviewed sources do not publish slot counts, individual stat bonuses, set effects, perk systems, or optimal combinations. This hub therefore explains the confirmed framework without presenting speculative builds.</p>
+
+    <h2>Ranged and unusual combat options</h2>
+    <p>The official weapon discussion includes melee and ranged approaches, as well as options for attacking from range and using summons for assistance in battle. These examples describe possibilities within the broader weapon system. They do not establish that all ranged options belong to one category, that every summon is a Phantom Edge, or that summon duration, control, or cooldown rules are known.</p>
+
+    <h2>How do you unlock weapons?</h2>
+    <p>S-GAME says unique Phantom Edges are scattered throughout the world, and its State of Play deep dive says defeating some enemies can expand the arsenal. Those statements support exploration and some enemy encounters as ways the arsenal can grow, but they do not provide a universal acquisition system. No official full location list, boss-drop rule, shop system, crafting system, or random-drop rule is assumed here.</p>
+
+    <h2>Is the full weapon list known?</h2>
+    <p>No complete official launch inventory is public in the reviewed sources. The confirmed counts and categories are useful for understanding the system, but they are not a substitute for a full weapon list. PBZ Guides will expand this hub as individual weapons are officially revealed or verified after launch.</p>
+
+    <h2>Current weapon coverage on PBZ Guides</h2>
+    <p>Only published, source-aware weapon pages appear below. Future published entries in the weapons collection will be added here automatically.</p>
+    <div class="guide-list">{entries.map((entry) => <ContentCard href={`/weapons/${entry.data.slug}/`} title={entry.data.title} description={entry.data.description} />)}</div>
+
+    <h2>Official sources</h2>
+    <p>This hub was last checked on September 8, 2026 against S-GAME's <a href="https://pbz.s-game.com/en-US/news/first-gameplay-trailer/">official gameplay article</a> and the <a href="https://blog.playstation.com/?p=421706">PlayStation Blog State of Play deep dive</a>. The hub distinguishes their confirmed weapon-system facts from details the sources have not yet published.</p>
+  </article>
+</BaseLayout>
