@@ -1,7 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CategoryLanding from '../../components/CategoryLanding.astro';
+import ContentCard from '../../components/ContentCard.astro';
 import { publishedEntriesFor } from '../../lib/content';
 const entries = await publishedEntriesFor('bosses');
 ---
-<BaseLayout title="Bosses" description="Browse the source-aware Phantom Blade Zero boss reference." path="/bosses/"><CategoryLanding area="bosses" {entries} /></BaseLayout>
+<BaseLayout title="Phantom Blade Zero Bosses" description="Explore officially revealed Phantom Blade Zero bosses and major encounters, starting with Seven Stars, with verified pre-release details and future launch guides." path="/bosses/">
+  <article class="prose">
+    <p class="eyebrow">Bosses hub</p>
+    <h1>Phantom Blade Zero Bosses</h1>
+    <p class="lede">PBZ Guides tracks officially revealed bosses and major encounters. Seven Stars is the first published profile, documenting S-GAME's pre-release showcase without presenting it as a retail walkthrough.</p>
+
+    <h2>Officially revealed encounters</h2>
+    <p>Only source-aware encounter profiles appear below. Future profiles will be added when S-GAME or an official partner confirms their names and relevant context. This hub does not claim a complete boss roster or use placeholders for unrevealed opponents.</p>
+    <div class="guide-list">{entries.map((entry) => <ContentCard href={`/bosses/${entry.data.slug}/`} title={entry.data.title} description={entry.data.description} />)}</div>
+
+    <h2>Pre-release profiles and future guides</h2>
+    <p>Official footage can establish an encounter without confirming its final mechanics, rewards, or strategies. Current profiles distinguish those published details from launch-version information. Retail strategy guides can follow only when the released encounter can be verified.</p>
+  </article>
+</BaseLayout>
