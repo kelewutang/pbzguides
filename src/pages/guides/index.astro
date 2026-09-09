@@ -1,7 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CategoryLanding from '../../components/CategoryLanding.astro';
+import ContentCard from '../../components/ContentCard.astro';
 import { publishedEntriesFor } from '../../lib/content';
 const entries = await publishedEntriesFor('guides');
 ---
-<BaseLayout title="Guides" description="Browse English-language Phantom Blade Zero guides and practical reference content." path="/guides/"><CategoryLanding area="guides" {entries} /></BaseLayout>
+<BaseLayout title="Phantom Blade Zero Guides: Release, Story & World" description="Browse verified Phantom Blade Zero guides for release and purchase information, platforms and PC requirements, plus the official story premise and world setting." path="/guides/">
+  <article class="prose">
+    <p class="eyebrow">Guides hub</p>
+    <h1>Phantom Blade Zero Guides</h1>
+    <p class="lede">PBZ Guides collects source-aware English reference for the questions currently supported by official material. Current coverage includes release and purchasing information, platforms and PC requirements, and the announced story premise and world setting.</p>
+
+    <h2>Release and purchase information</h2>
+    <p>Start with the announced release date, then use the published guides to compare pre-orders and editions. Storefront timing, regional details, and other pre-release information can change, so each guide keeps confirmed facts separate from details that have not been announced.</p>
+
+    <h2>Platforms and PC</h2>
+    <p>Platform and system-requirements coverage records the official storefront and PC information currently available. It does not assume unannounced platform versions, compatibility programs, or performance behavior beyond the published requirements.</p>
+
+    <h2>Story and world</h2>
+    <p>The latest guides explain the official premise around Soul and the setting terms S-GAME has introduced, including Phantom World and the Wulin. They are pre-release overviews, not walkthroughs, map databases, quest guides, or ending explanations.</p>
+
+    <h2>Current guide coverage</h2>
+    <p>Only published, source-aware guides appear below. Future published entries in the guides collection will be added here automatically.</p>
+    <div class="guide-list">{entries.map((entry) => <ContentCard href={`/guides/${entry.data.slug}/`} title={entry.data.title} description={entry.data.description} />)}</div>
+  </article>
+</BaseLayout>
