@@ -1,11 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentCard from '../components/ContentCard.astro';
+import { contentAreaKeys, contentAreas } from '../data/content-areas';
+import { featuredContent } from '../data/featured-content';
 import { pages } from '../data/pages';
 import { site } from '../config/site';
+import { contentPath, publishedEntriesForAllAreas } from '../lib/content';
+
+const publishedEntries = await publishedEntriesForAllAreas();
+const featuredEntries = featuredContent.flatMap(({ area, slug }) => {
+  const entry = publishedEntries.find((group) => group.area === area)?.entries.find((candidate) => candidate.data.slug === slug);
+  return entry ? [{ area, entry }] : [];
+});
 ---
 <BaseLayout {...pages.home} schema={{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, inLanguage: site.language }}>
-<section class="intro"><p class="eyebrow">Independent player reference</p><h1>Phantom Blade Zero<br /><span>Guides & reference</span></h1><p class="lede">An English-language guide library for Phantom Blade Zero.</p></section>
-<ContentCard href="/guides/" title="Explore the guide library" description="Our first guides are being prepared. Visit the library to see current coverage." />
-<section class="editorial"><h2>Coverage you can check</h2><p>Our editorial approach is to cite sources, distinguish observations from confirmed information, and explain which version a guide covers.</p><p>The library is currently empty. We will add articles as they are researched and reviewed.</p></section>
+  <section class="intro">
+    <p class="eyebrow">Independent player reference</p>
+    <h1>Phantom Blade Zero Guides</h1>
+    <p class="lede">An English-language guide and reference site for release information, platforms and PC requirements, weapons, combat, characters, bosses, story, and world details.</p>
+    <p class="actions"><a class="button-link" href="/guides/">Browse Guides</a><a class="button-link" href="#topics">Explore Topics</a></p>
+  </section>
+
+  <section id="topics" aria-labelledby="topics-heading">
+    <h2 id="topics-heading">Explore by Topic</h2>
+    <div class="card-grid">
+      {contentAreaKeys.map((area) => <ContentCard href={contentPath(area)} title={contentAreas[area].label} description={contentAreas[area].homepageDescription} />)}
+    </div>
+  </section>
+
+  <section class="editorial" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured Content</h2>
+    <div class="card-grid">
+      {featuredEntries.map(({ area, entry }) => <ContentCard href={contentPath(area, entry.data.slug)} title={entry.data.title} description={entry.data.description} />)}
+    </div>
+  </section>
+
+  <section class="editorial" aria-labelledby="evidence-heading">
+    <h2 id="evidence-heading">Verified against official sources</h2>
+    <p>PBZ Guides uses official S-GAME, platform, and publisher sources where possible. It separates confirmed facts from unresolved pre-release details, and pages can be revised as new official information is published.</p>
+  </section>
 </BaseLayout>
