@@ -54,6 +54,8 @@ For its Ray Tracing Recommended target, S-GAME lists an **NVIDIA GeForce RTX 506
 
 The official ray-tracing row does not separately publish a CPU, memory, operating-system, DirectX, storage, or AMD GPU requirement. This page therefore does not present the Minimum or Recommended rows as if they were a complete official ray-tracing configuration.
 
+For the separately announced 2025 RTX presentation, see [Pangzhen in *Phantom Blade Zero*](/guides/phantom-blade-zero-pangzhen/). That location reveal describes ray tracing and DLSS 4 with Multi Frame Generation; it does not establish the later whole-game path-tracing target for the Pangzhen showcase.
+
 ## Path tracing requirements
 
 For Path Tracing Recommended, S-GAME lists an **NVIDIA GeForce RTX 5080 16GB** and **2160p / 60 FPS with upscaling enabled**. 2160p is commonly called 4K UHD, but the specification is kept here in S-GAME's published wording.

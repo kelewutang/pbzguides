@@ -58,6 +58,8 @@ Exploration also has a narrative role in the published description. S-GAME says 
 
 The reviewed sources establish broad setting language, but they do not provide a complete location database or map. They do not identify every region, settlement, route, dungeon, capital, or activity sequence.
 
+One separately revealed location is [Pangzhen in *Phantom Blade Zero*](/guides/phantom-blade-zero-pangzhen/). S-GAME's Pangzhen announcement supports its relationship to *Rainblood* and its visual reconstruction, but it does not establish the town's geographic relationship to Phantom World or the Wulin.
+
 PBZ Guides therefore does not treat a mention of the Wulin or a setting image as evidence for a full travel guide. Future location coverage needs a sufficiently specific official source and a distinct player need; this page remains a careful overview of the world-level terms currently published.
 
 ## What is still unknown?
