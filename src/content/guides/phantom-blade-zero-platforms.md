@@ -5,7 +5,7 @@ slug: phantom-blade-zero-platforms
 status: published
 updatedAt: 2026-09-08
 seo:
-  title: "Phantom Blade Zero Platforms: PS5, Steam & Epic Games Store"
+  title: "Phantom Blade Zero Platforms: PS5 & PC"
   description: See the currently confirmed Phantom Blade Zero platforms and storefronts, including PS5 and PC availability through Steam and the Epic Games Store.
 evidenceStatus: confirmed
 lastVerified: 2026-09-08
