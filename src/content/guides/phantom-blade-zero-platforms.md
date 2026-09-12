@@ -42,6 +42,8 @@ Yes. S-GAME's current pre-order announcement includes Steam and the Epic Games S
 
 Platform availability alone does not answer whether a particular PC can run the game. For the published hardware targets, see [Phantom Blade Zero System Requirements](/guides/phantom-blade-zero-system-requirements/). That guide covers the current official requirements rather than storefront features or compatibility guarantees.
 
+For Steam's current controller labels and its point-in-time Steam Deck Compatibility status, see [Phantom Blade Zero Controller Support & Steam Deck Status](/guides/phantom-blade-zero-controller-support/). Those storefront details are separate from confirmed PC availability.
+
 ## Is Phantom Blade Zero on PS5?
 
 Yes. S-GAME lists PS5 in its current pre-order announcement, and PlayStation's official announcement says the game is available to pre-order on PlayStation 5. These sources support describing PS5 as a currently confirmed platform.
