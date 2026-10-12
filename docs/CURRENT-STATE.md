@@ -2,7 +2,7 @@
 
 ## Resume here
 
-At the start of Phase 3J-E, the verified `main` and `origin/main` HEAD is `06ac16e84efd2d85d727bcc18627ee1d4171dd72`. This is the starting baseline for this uncommitted documentation update, not a permanently current SHA; check Git again after any later commit. The checkout is `/home/mok/projects/pbzguides`, and the remote repository is `https://github.com/kelewutang/pbzguides.git`.
+At the start of Phase 3K-B, the verified `main` and `origin/main` HEAD is `20fc27245e0c7d30e0f531355203216be0f44f8e`. This is the starting baseline for this uncommitted dependency update, not a permanently current SHA; check Git again after any later commit. The checkout is `/home/mok/projects/pbzguides`, and the remote repository is `https://github.com/kelewutang/pbzguides.git`.
 
 Production identity is https://pbzguides.com. Netlify is the deployment platform; `main` is the production branch and `dist` is the static publish directory. Use Node 24.19.0 and npm. If Node is not on PATH, use `/home/mok/.nvm/versions/node/v24.19.0/bin` or load nvm.
 
@@ -10,7 +10,9 @@ Production identity is https://pbzguides.com. Netlify is the deployment platform
 
 The current source projection has 17 `published` detail pages: 9 guides, 2 weapons, 2 combat topics, 3 characters and 1 boss. A production build generates 24 HTML pages and 23 unique canonical sitemap URLs. Normal public routes use trailing slashes; `draft` and `withdrawn` entries generate no public detail route or sitemap URL, and the 404 page stays out of the sitemap. The homepage discovers published featured entries from its editorial list.
 
-Phase 3H (metadata and content-admission audit), Phase 3I-B (Pangzhen), Phase 3I-D (Controller Support & Steam Deck), Phase 3J-C (release and purchase facts), and Phase 3J-D (difficulty evidence) are complete and committed. Phase 3J-A Side Quests & Exploration Evidence Design remains at WAIT; Phase 3J-B Pre-Launch Baseline & Content Opportunity Audit is COMPLETE. Those two are research decisions, not implementation commits. Phase 3J-E is the current uncommitted documentation work.
+Phase 3H (metadata and content-admission audit), Phase 3I-B (Pangzhen), Phase 3I-D (Controller Support & Steam Deck), Phase 3J-C (release and purchase facts), Phase 3J-D (difficulty evidence), and Phase 3J-E (documentation sync) are complete and committed. Phase 3J-A Side Quests & Exploration Evidence Design remains at WAIT; Phase 3J-B Pre-Launch Baseline & Content Opportunity Audit and Phase 3K-A Dependency Security & Build Supply Chain Audit are COMPLETE research decisions, not implementation commits. Phase 3K-B is the current uncommitted dependency security update.
+
+Phase 3K-B changes only `package-lock.json` and this handoff document. Astro stays at `7.2.8`; the locked transitive versions move to devalue `5.9.4`, sharp `0.35.5` (with its required platform packages), source-map-js `1.2.2`, and smol-toml `1.9.1`. The full dependency audit still reports one high advisory, GHSA-ch52-4w7c-c8xp, for unchanged http-cache-semantics `4.2.0`; the production-dependency-only audit reports zero. The advisory lists no confirmed patched version, and its upstream maintainer disputes its security interpretation. In the current Astro source, this package is used for remote-image build caching through `storable()` and `timeToLive()`, not the advisory's request-hit path; this site has no remote-image processing or server-side runtime. No reachable exploit was confirmed, but the warning is not treated as fixed or harmless. The actual Netlify build environment, install-script policy and deployment of this update remain unverified.
 
 The October 12 pre-launch audit reported that all 23 sitemap pages were accessible and production HTML matched the isolated build output. That report does not establish a specific Netlify deploy ID, its commit-SHA association, or the latest deploy logs. Google Search Console and Bing indexing/performance statistics, Deploy Preview noindex behavior, current Core Web Vitals, and browser accessibility checks remain unverified.
 
@@ -57,6 +59,7 @@ The phase notes below preserve what was added and verified at each milestone. Th
 - Phase 3I-D, `00db401` — added the Controller Support & Steam Deck guide.
 - Phase 3J-C, `64dda9d` — refreshed the Release Date, Pre-Order and Editions guides and the Weapons Hub against release and purchase evidence. The three guide source files now have `lastVerified: 2026-10-12`.
 - Phase 3J-D, `06ac16e` — updated the Difficulty Modes guide with clearly attributed developer statements, reported explanations and preview observations. Its source file now has `lastVerified: 2026-10-12`.
+- Phase 3J-E, `20fc272` — synchronized project handoff documentation. Phase 3K-A was a completed read-only dependency audit, without an implementation commit.
 - Phase 3J-A Side Quests & Exploration Evidence Design: WAIT; Phase 3J-B Pre-Launch Baseline & Content Opportunity Audit: COMPLETE. These are research outcomes, without corresponding implementation commits.
 
 ## Source and evidence boundary
@@ -67,7 +70,7 @@ The Chinese repository remains a read-only architecture reference. Its content, 
 
 ## Actual validation
 
-The older results below are historical phase snapshots. Current Phase 3J-E validation is recorded at the end of this section.
+The older results below are historical phase snapshots. Current Phase 3K-B validation is recorded at the end of this section.
 
 - Historical Phase 3I-D `npm ci`: passed; 186 packages installed and 0 vulnerabilities were reported at that time. npm warned that esbuild postinstall remained pending explicit allowlisting; no policy bypass was added.
 - Historical 15-detail-page baseline `npm run build`: passed. It generated 22 HTML pages, 21 canonical sitemap URLs, `/robots.txt` and `/sitemap.xml`; the 404 page was excluded. These counts predate Pangzhen and Controller Support and are not the current build projection. The verifier checked language, H1, metadata, canonicals, JSON-LD, internal links, robots, 404 exclusion, no runtime scripts and per-area published-route projection.
@@ -79,6 +82,7 @@ The older results below are historical phase snapshots. Current Phase 3J-E valid
 - Phase 2B passed factual-accuracy, official-source, October 28/October 29 discrepancy, early-access wording, SEO, and build/regression audits. Its only prior Gate failure was this stale handoff documentation.
 - Historical `git diff --check`: passed. The October 12 pre-launch audit reported accessible sitemap pages and matching production HTML, but did not verify the specific Netlify deploy ID or commit association, latest deploy logs, search-console metrics, preview noindex behavior, current Core Web Vitals, or browser accessibility.
 - Phase 3J-E isolated-copy validation on Node 24.19.0: `npm ci`, `npm run build`, and `npm run test:build-hygiene` passed. The final build projects 17 published detail pages (9 guides, 2 weapons, 2 combat, 3 characters, 1 boss), 24 HTML pages and 23 canonical sitemap URLs; temporary fixtures are absent. This `npm ci` reported 5 dependency-audit findings (1 moderate, 4 high) and an esbuild install-script allowlisting warning; dependency changes are outside this documentation phase. `git diff --check` passed in the canonical repository.
+- Phase 3K-B isolated-copy validation on Node 24.19.0: `npm ci`, `npm run build`, and `npm run test:build-hygiene` passed. `npm audit` reports one high finding for http-cache-semantics; `npm audit --omit=dev` reports zero, and `npm ls --depth=0` shows only astro `7.2.8`. The final clean build has 17 published detail pages, 24 HTML pages and 23 unique canonical sitemap URLs, without validation fixtures or runtime JavaScript. All 27 published files have the same paths and SHA-256 hashes as an isolated build from the starting lockfile. `git diff --check` passed; Netlify build and deployment behavior for this uncommitted update were not tested.
 
 ## Intentionally unresolved facts
 
