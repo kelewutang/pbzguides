@@ -3,12 +3,12 @@ title: Phantom Blade Zero Release Date
 description: S-GAME's announced release date, the previous delay, confirmed platforms, and the current Steam storefront timing.
 slug: phantom-blade-zero-release-date
 status: published
-updatedAt: 2026-09-08
+updatedAt: 2026-10-12
 seo:
   title: "Phantom Blade Zero Release Date: October 29, 2026"
-  description: Phantom Blade Zero officially launches October 29, 2026. See the confirmed release date, previous delay, platforms, and current Steam timing.
+  description: S-GAME announces Phantom Blade Zero for October 29, 2026; PlayStation notes October 28 in the US and select regions. Steam separately lists October 28.
 evidenceStatus: confirmed
-lastVerified: 2026-09-08
+lastVerified: 2026-10-12
 sources:
   - label: S-GAME official Phantom Blade Zero website
     url: https://pbz.s-game.com/en-US/
@@ -16,25 +16,23 @@ sources:
     url: https://pbz.s-game.com/en-US/news/creative-director-letter/
   - label: PlayStation Blog, pre-orders and gameplay deep dive announcement
     url: https://blog.playstation.com/2026/08/11/watch-the-phantom-blade-zero-gameplay-deep-dive-state-of-play-on-august-17-pre-orders-live-today/
+  - label: PlayStation Blog, State of Play deep dive and regional date note
+    url: https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/
   - label: Official Steam store listing
     url: https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/
 ---
 
 ## Quick answer
 
-S-GAME currently announces **October 29, 2026** as the release date for *Phantom Blade Zero*. PlayStation also lists October 29, 2026 for the PlayStation 5 release. The current Steam store page, however, displays **October 28, 2026**. That storefront difference is visible now, but the official sources reviewed here do not explain it.
+S-GAME currently announces **October 29, 2026** as the release date for *Phantom Blade Zero*. PlayStation's later announcement explicitly notes **October 28 in the US and select regions**. Separately, the Steam store page currently displays **October 28, 2026**. These sources do not establish one worldwide unlock time.
 
-This is pre-release information. PBZ Guides will update this page if S-GAME, PlayStation, or Steam changes or clarifies the timing.
-
-Release-date reporting is most useful when it separates an announced date from the date a particular storefront currently displays. This page therefore keeps the official announcement and the Steam listing visible together instead of treating one as an explanation for the other. Players deciding where to pre-order or when to play should check the relevant official store page again near launch.
+This is pre-release information verified on October 12, 2026. Check your official storefront again near launch for the date and timing that apply to you.
 
 ## What is the official Phantom Blade Zero release date?
 
-S-GAME's [official website](https://pbz.s-game.com/en-US/) lists the release date as October 29, 2026. PlayStation's [pre-order announcement](https://blog.playstation.com/2026/08/11/watch-the-phantom-blade-zero-gameplay-deep-dive-state-of-play-on-august-17-pre-orders-live-today/) also says the game launches on October 29, 2026 for PlayStation 5.
+S-GAME's [official website](https://pbz.s-game.com/en-US/) lists October 29, 2026. PlayStation's [pre-order announcement](https://blog.playstation.com/2026/08/11/watch-the-phantom-blade-zero-gameplay-deep-dive-state-of-play-on-august-17-pre-orders-live-today/) gives the same main date, while its later [State of Play article](https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/) specifies October 28 in the US and select regions.
 
-Those are the dates PBZ Guides treats as the current official announcement. At the same time, the [Steam store listing](https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/) currently shows October 28, 2026. If you are planning around a specific storefront, check that store's page again close to launch.
-
-For a direct answer to the release-date question, October 29, 2026 is the date announced by S-GAME and repeated by PlayStation. The separate Steam date is still relevant to PC players, so it is recorded here rather than folded into an unsupported single-date explanation. PBZ Guides will revise the summary if an official source changes either listing or explains the difference.
+The [Steam store listing](https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/) independently displays October 28, 2026. It does not explain how its displayed date relates to PlayStation's regional note.
 
 For the current purchase and availability context, see the [Phantom Blade Zero Pre-Order Guide](/guides/phantom-blade-zero-pre-order/), [Phantom Blade Zero Editions](/guides/phantom-blade-zero-editions/), and [Phantom Blade Zero Platforms](/guides/phantom-blade-zero-platforms/). Those pages cover related questions without changing the announced-date discussion here.
 
@@ -44,11 +42,11 @@ Yes. In its June 2, 2026 [letter from the creative director](https://pbz.s-game.
 
 S-GAME said it did not want to release the game while there was still an opportunity to take it further. The letter describes the added time as a period for further development and refinement before launch. It does not provide a detailed public breakdown of every change planned for that period, so this page does not infer one.
 
-## Why does Steam show October 28?
+## Why do some listings show October 28?
 
-Steam currently displays October 28, 2026, while S-GAME's official site and PlayStation's information identify October 29, 2026. The sources reviewed for this page do not state why those displayed dates differ.
+PlayStation explicitly says October 28 applies in the US and select regions, alongside its October 29 main date. Steam also currently displays October 28 on its own store page.
 
-PBZ Guides is not treating the difference as proof of a timezone conversion, a regional rollout, platform-specific timing, early access, or any other explanation. Those possibilities require an explicit official statement. Until then, the safest reading is simply that the storefront currently shows a different calendar date.
+The reviewed sources do not give a single worldwide unlock time or explain whether Steam's date follows the same regional schedule. Neither date is evidence of an early-access period.
 
 ## What platforms is Phantom Blade Zero releasing on?
 
@@ -66,7 +64,7 @@ Until then, a preorder should be understood only as a preorder. PBZ Guides will 
 
 ### What is the Phantom Blade Zero release date?
 
-S-GAME currently announces October 29, 2026. PlayStation also lists October 29, while Steam currently displays October 28.
+S-GAME announces October 29, 2026. PlayStation specifies October 28 in the US and select regions, and Steam separately displays October 28.
 
 ### Was Phantom Blade Zero delayed?
 

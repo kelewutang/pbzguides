@@ -29,7 +29,7 @@ const entries = await publishedEntriesFor('weapons');
     <p>The official State of Play deep dive says weapons can be upgraded. It also says that an upgraded weapon can be reforged, returning its materials so they can be reinvested in another weapon. This describes a broad upgrade and material-recovery system, not a published list of materials, caps, rarity tiers, stat trees, or cost formulas.</p>
 
     <h2>Accessories and builds</h2>
-    <p>S-GAME says players can pair weapons with different accessories to create the build they want. That confirms accessories as part of the broader equipment system, but the reviewed sources do not publish slot counts, individual stat bonuses, set effects, perk systems, or optimal combinations. This hub therefore explains the confirmed framework without presenting speculative builds.</p>
+    <p>S-GAME says players can pair weapons with different accessories to create the build they want. The official <a href="https://www.playstation.com/en-us/games/phantom-blade-zero/">PlayStation game page</a> gives one specific example: the Treasure Basin accessory increases Remnant Dust drop rate by 10%. This does not establish other accessory effects, slot counts, set effects, perk systems, or optimal combinations. This hub therefore explains the confirmed framework without presenting speculative builds.</p>
 
     <h2>Ranged and unusual combat options</h2>
     <p>The official weapon discussion includes melee and ranged approaches, as well as options for attacking from range and using summons for assistance in battle. These examples describe possibilities within the broader weapon system. They do not establish that all ranged options belong to one category, that every summon is a Phantom Edge, or that summon duration, control, or cooldown rules are known.</p>
@@ -45,6 +45,6 @@ const entries = await publishedEntriesFor('weapons');
     <div class="guide-list">{entries.map((entry) => <ContentCard href={`/weapons/${entry.data.slug}/`} title={entry.data.title} description={entry.data.description} />)}</div>
 
     <h2>Official sources</h2>
-    <p>This hub was last checked on September 8, 2026 against S-GAME's <a href="https://pbz.s-game.com/en-US/news/first-gameplay-trailer/">official gameplay article</a> and the <a href="https://blog.playstation.com/?p=421706">PlayStation Blog State of Play deep dive</a>. The hub distinguishes their confirmed weapon-system facts from details the sources have not yet published.</p>
+    <p>This hub was last checked on October 12, 2026 against S-GAME's <a href="https://pbz.s-game.com/en-US/news/first-gameplay-trailer/">official gameplay article</a>, the <a href="https://blog.playstation.com/?p=421706">PlayStation Blog State of Play deep dive</a>, and the <a href="https://www.playstation.com/en-us/games/phantom-blade-zero/">PlayStation game page</a>. The hub distinguishes their confirmed weapon-system facts from details the sources have not yet published.</p>
   </article>
 </BaseLayout>
