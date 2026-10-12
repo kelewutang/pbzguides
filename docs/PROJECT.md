@@ -2,7 +2,7 @@
 
 PBZ Guides is an independent, unofficial English-language Phantom Blade Zero guide and reference site. Its repository is https://github.com/kelewutang/pbzguides.git and production URL is https://pbzguides.com. Local checkout: `/home/mok/projects/pbzguides`.
 
-Phase 2A: establish a maintainable English information architecture, not a populated game database. Success means a reproducible static build, five discoverable category routes, typed empty Content Collections, a shared detail-page foundation, centralized identity, static SEO and resumable documentation.
+Phase 2A established a maintainable English information architecture rather than a game database: a reproducible static build, five discoverable category routes, typed Content Collections, a shared detail-page foundation, centralized identity, static SEO and resumable documentation. The collections are now populated with reviewed published entries.
 
 The Chinese project is architectural reference only. Its knowledge schema, content, branding, assets, analytics, redirects and deployment identity have not been imported. There is no shared runtime or build dependency. Its documentation identifies a Chinese domain, but no language links are enabled because equivalent English pages and reciprocal mappings have not been reviewed.
 
@@ -36,4 +36,4 @@ Do not mirror Chinese `/world/` or create empty category routes. Items, builds, 
 
 The five category collections share publication, SEO and optional evidence metadata, while keeping their own routes and source directories. Future weapon, boss and character taxonomies; relationships; item/location systems; tier lists; best builds; launch content inventory; cross-language mappings; social previews and visual redesign remain intentionally undecided.
 
-Next phase: review English search results and official terminology, approve a small set of sourced article or entity briefs, then implement one real editorial pilot. Category expansion must follow English player/search intent, not automatic parity with the Chinese site. Decide indexing readiness before launch; the current library is transparently empty, and index/follow metadata is preparatory, not launch approval.
+Current work is Phase 3J-E documentation synchronization after the committed Phase 3J-C release/purchase refresh and Phase 3J-D difficulty update. Next work is pre-launch verification and factual freshness checks, draft-only post-launch templates where justified, updates to existing pages as verified evidence appears, and launch-period content based on reproducible retail gameplay evidence. Side Quests / Exploration remains at WAIT. Jagged Steel and Peng Meng are draft-brief candidates, not approved published boss strategy pages. Category expansion must follow English player/search intent, not automatic parity with the Chinese site.

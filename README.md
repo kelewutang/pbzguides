@@ -1,6 +1,6 @@
 # PBZ Guides
 
-Independent English guide/reference website for Phantom Blade Zero. Production identity: https://pbzguides.com. Phase 2A establishes the category and entity foundation; no game facts or published entries are included.
+Independent English guide/reference website for Phantom Blade Zero. Production identity: https://pbzguides.com. The site currently has 17 published detail pages across five content areas, plus category hubs and homepage discovery.
 
 ## Local development
 
@@ -13,7 +13,7 @@ npm run build
 npm run preview
 ```
 
-`build` generates static Astro output and validates HTML, SEO, internal links, sitemap and 404 isolation. Netlify publishes `dist`. No Netlify site has been created or connected; no deployment is authorized in this phase.
+`build` generates static Astro output and validates HTML, SEO, internal links, sitemap and 404 isolation. Netlify builds from `main` and publishes `dist` for the production domain. This documentation update does not trigger a deployment; see [Current state](docs/CURRENT-STATE.md) for the limits of verified production evidence.
 
 Routes: `/`, `/guides/`, `/weapons/`, `/bosses/`, `/combat/`, `/characters/`, and custom `404.html`; machine endpoints `/sitemap.xml`, `/robots.txt`. Directory routes use trailing slashes. Published content generates one detail route below its own category, such as `/weapons/{slug}/`.
 

@@ -1,14 +1,15 @@
 # Architecture
 
-PBZ Guides uses Astro 7.2.8, Node 24.19.0, npm, strict TypeScript configuration and native CSS. `npm run build` removes `dist/`, runs `astro build --force`, then verifies the static artifact before a future independent Netlify deployment. There is no adapter, SSR, frontend framework, runtime data request or production client JavaScript.
+PBZ Guides uses Astro 7.2.8, Node 24.19.0, npm, strict TypeScript configuration and native CSS. `npm run build` removes `dist/`, runs `astro build --force`, then verifies the static artifact published by Netlify. There is no adapter, SSR, frontend framework, runtime data request or production client JavaScript.
 
 ## Sources of truth
 
 - `src/config/site.ts`: site identity, production origin, title template, descriptions, social defaults, language and dormant page-specific alternate URLs.
 - `src/data/pages.ts` and `src/data/content-areas.ts`: homepage metadata plus the single route, label and category-copy definition for guides, weapons, bosses, combat and characters.
-- `src/content/{guides,weapons,bosses,combat,characters}/*.md`: future English editorial bodies and frontmatter. No placeholder article is shipped.
+- `src/content/{guides,weapons,bosses,combat,characters}/*.md`: reviewed English editorial bodies and frontmatter. The current published distribution is 9 guides, 2 weapons, 1 boss, 2 combat topics and 3 characters; no placeholder article is shipped.
 - `src/content.config.ts`: five typed Astro Content Collections sharing current common metadata: stable slug, title, description, status, updatedAt, optional SEO overrides, evidence status, verification date, sources and future language mapping. Separate collections preserve their namespaces; no game taxonomy or relationship model is implied.
 - `src/lib/content.ts`: duplicate-slug guard and shared published-only projection for category indexes, detail routes and sitemap.
+- `src/data/featured-content.ts` and `src/pages/index.astro`: a short editorial list resolved against published entries for homepage discovery; missing, draft or withdrawn entries are omitted.
 - `src/components/SEO.astro`: static head output; optional schema object serialized with `<` escaping; optional image metadata only when an actual asset is configured.
 - `src/components/CategoryLanding.astro`, `ContentCard.astro`, `Breadcrumbs.astro` and `ContentMetadata.astro`: reusable category, card, navigation and optional verification presentation.
 - `src/layouts/BaseLayout.astro`: English document, shared shell and CSS. `ContentDetailLayout.astro` plus `src/pages/[area]/[slug].astro` provide the shared static detail architecture, including an optional future page-schema handoff to the existing SEO component.
@@ -42,4 +43,4 @@ All normal pages emit title, description, canonical, robots, OG and X metadata. 
 
 ## Netlify
 
-`netlify.toml` runs `npm ci && npm run build` and publishes `dist`, with Node pinned. A future setup must create a new Netlify site tied only to this repository. No `.netlify` site identity, token or Chinese hosting configuration is copied. Preview indexing headers, DNS, domain redirects and actual HTTP normalization must be reviewed in the independent hosted site before launch.
+`netlify.toml` runs `npm ci && npm run build` and publishes `dist`, with Node pinned. The production domain is `https://pbzguides.com`, the deployment platform is Netlify, and the production branch is `main`. No `.netlify` site identity, token or Chinese hosting configuration is copied into this repository. The specific deploy ID and commit association, latest deploy logs, Deploy Preview noindex behavior, and current browser/accessibility measurements remain unverified; see `CURRENT-STATE.md` for the dated production audit.
