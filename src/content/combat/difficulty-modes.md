@@ -3,22 +3,26 @@ title: Phantom Blade Zero Difficulty Modes
 description: Officially confirmed Phantom Blade Zero difficulty information for Wayfarer, Hellwalker, and Sixty-Six Days mode, plus the details S-GAME has not published.
 slug: difficulty-modes
 status: published
-updatedAt: 2026-09-08
+updatedAt: 2026-10-12
 seo:
   title: "Phantom Blade Zero Difficulty Modes: Wayfarer, Hellwalker & Sixty-Six Days"
   description: Learn the officially confirmed roles of Phantom Blade Zero's Wayfarer, Hellwalker, and Sixty-Six Days difficulty modes, and what remains unknown.
 evidenceStatus: confirmed
-lastVerified: 2026-09-08
+lastVerified: 2026-10-12
 sources:
   - label: PlayStation Blog, S-GAME State of Play deep dive
     url: https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/
+  - label: Epic Games Store, Soulframe Liang interview and hands-on
+    url: https://store.epicgames.com/news/phantom-blade-zero-interview-hands-on-soulslike
+  - label: RPGFan, Soulframe Liang interview and hands-on
+    url: https://www.rpgfan.com/2026/10/08/phantom-blade-zero-hands-preview/
 ---
 
 ## Quick answer
 
 S-GAME has officially named three *Phantom Blade Zero* difficulty options: **Wayfarer**, **Hellwalker**, and **Sixty-Six Days**. Wayfarer is for players who would simply like to enjoy the story. Hellwalker raises the challenge with more advanced and adaptive enemy intelligence. Sixty-Six Days is presented as another demanding option that is not for the faint of heart.
 
-Those descriptions establish the intended audience for each named option, but they are not a full mechanical specification. The official material reviewed for this page does not publish numerical damage or health changes, a complete ranked list of difficulties, or the rules for changing a selection during play.
+Those descriptions establish the intended audience for each named option, but they are not a full mechanical specification. A later interview quotes S-GAME director Soulframe Liang saying that a “66 Days mode” unlocks in New Game Plus; the report does not explicitly equate that shortened name with the earlier Sixty-Six Days difficulty. Numerical damage and health changes, a complete ranked list, and the release version's difficulty-switching rules remain unconfirmed.
 
 ## What difficulty modes are confirmed?
 
@@ -40,15 +44,17 @@ That is the published description of the challenge, but it does not explain the 
 
 ## Sixty-Six Days mode
 
-S-GAME describes **Sixty-Six Days** as another challenging difficulty option and says it is not for the faint of heart. The wording confirms a demanding mode, without publishing its exact rules or placing it in a complete numerical hierarchy.
+S-GAME describes **Sixty-Six Days** as another challenging difficulty option and says it is not for the faint of heart. In a later [Epic Games Store interview](https://store.epicgames.com/news/phantom-blade-zero-interview-hands-on-soulslike), director Soulframe Liang says a “66 Days mode” unlocks in New Game Plus and frames the second run around challenge. The interview does not explicitly say whether its abbreviated name is the same option named Sixty-Six Days in the earlier PlayStation article, so it does not establish a definitive unlock rule for that named difficulty.
 
-The difficulty-mode name should not be conflated with Soul's separate 66-day narrative premise. The [Soul character profile](/characters/soul/) records that premise only as published story context. The current official material does not establish a connection between the difficulty option and that narrative condition, so this page does not assign one.
+The [Soul character profile](/characters/soul/) records Soul's 66-day premise as story context. [RPGFan's interview](https://www.rpgfan.com/2026/10/08/phantom-blade-zero-hands-preview/) reports that Liang said the narrative time limit does not affect the initial playthrough and described a post-completion roguelike challenge with 66 lives. RPGFan does not name that challenge Sixty-Six Days. Epic's writer describes a death limit for “66 Days mode,” but the reviewed sources do not specify the named difficulty's save, reset, or restart rules. They do not support a gameplay countdown or permanent failure in the initial story run.
+
+## Is Pathbreaker another difficulty?
+
+The Epic writer reports playing a preview in which **Pathbreaker** was the default setting and could be lowered to Wayfarer. This is a [hands-on observation](https://store.epicgames.com/news/phantom-blade-zero-interview-hands-on-soulslike), not an identified developer statement establishing Pathbreaker as a fourth retail difficulty or confirming a general switching policy.
 
 ## Can you change difficulty in Phantom Blade Zero?
 
-The reviewed official source confirms that players can tailor their experience through a range of difficulty options. It does not say whether a selection can be changed after starting, where such a change would be made, whether it has restrictions, or whether different options create separate saves.
-
-Those questions remain open. A future source may establish a switching policy, but a mode-selection interface should not be inferred from the existence of several named options.
+The PlayStation article confirms that players can tailor their experience through a range of difficulty options. Epic's writer reports that the preview allowed Pathbreaker to be lowered to Wayfarer. Neither account establishes the release version's full switching policy, where a change can be made, whether it has restrictions, or whether different options create separate saves.
 
 ## Do difficulty modes change rewards?
 
@@ -74,8 +80,8 @@ The official description says Hellwalker features more advanced and adaptive ene
 
 ### What is Sixty-Six Days mode?
 
-It is an officially named demanding difficulty option. Its precise mechanics, rewards, and relationship to Soul's separate 66-day story premise are not confirmed.
+It is an officially named demanding difficulty option. Liang later said a “66 Days mode” unlocks in New Game Plus, but the interview does not explicitly identify it as the same named option. Its precise mechanics and rewards remain unconfirmed.
 
 ### Can you switch difficulty modes?
 
-S-GAME has not published a switching policy for the named options.
+An Epic hands-on reports lowering the preview's Pathbreaker setting to Wayfarer. A general switching policy for the release version has not been confirmed.
