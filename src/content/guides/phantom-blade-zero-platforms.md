@@ -3,12 +3,12 @@ title: Phantom Blade Zero Platforms
 description: Current official Phantom Blade Zero platform and storefront information for PlayStation 5, Steam, and the Epic Games Store.
 slug: phantom-blade-zero-platforms
 status: published
-updatedAt: 2026-09-08
+updatedAt: 2026-10-12
 seo:
   title: "Phantom Blade Zero Platforms: PS5 & PC"
   description: See the currently confirmed Phantom Blade Zero platforms and storefronts, including PS5 and PC availability through Steam and the Epic Games Store.
 evidenceStatus: confirmed
-lastVerified: 2026-09-08
+lastVerified: 2026-10-12
 sources:
   - label: S-GAME official pre-order announcement
     url: https://pbz.s-game.com/en-US/news/pre-orders-now-available/
@@ -16,13 +16,15 @@ sources:
     url: https://pbz.s-game.com/en-US/
   - label: PlayStation Blog, pre-orders and gameplay deep dive announcement
     url: https://blog.playstation.com/2026/08/11/watch-the-phantom-blade-zero-gameplay-deep-dive-state-of-play-on-august-17-pre-orders-live-today/
+  - label: Official Steam store listing
+    url: https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/
 ---
 
 ## Quick answer
 
 The current official *Phantom Blade Zero* pre-order announcement lists **PlayStation 5**, **Steam**, and the **Epic Games Store**. In platform terms, that means confirmed PlayStation 5 and PC coverage. Steam and the Epic Games Store are PC storefronts rather than separate hardware platforms.
 
-This page reflects official platform and purchase information verified on September 8, 2026. It records the currently announced coverage without treating it as a permanent platform policy. The reviewed sources do not establish regional availability, cross-save, launcher requirements, account linking, mod support, achievement parity, preload timing, or subscription-service availability.
+This page reflects official platform and purchase information verified on October 12, 2026. It records the currently announced coverage without treating it as a permanent platform policy. The reviewed sources do not establish regional availability, cross-save, launcher requirements, account linking, mod support, achievement parity, preload timing, or subscription-service availability.
 
 ## Current confirmed availability
 
@@ -60,7 +62,7 @@ Nintendo platforms and Switch are likewise not included in the current official 
 
 ## Steam vs Epic Games Store
 
-Both Steam and the Epic Games Store are named in S-GAME's current pre-order announcement. That confirms the two current PC storefronts, but it does not establish cross-save, cross-progression, achievement parity, DRM, launcher requirements, account linking, mod support, or identical regional availability. Those questions need a direct official storefront or publisher statement.
+Both Steam and the Epic Games Store are named in S-GAME's current pre-order announcement. That confirms the two current PC storefronts. The [official Steam store listing](https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/) currently says “Incorporates 3rd-party DRM: Denuvo.” This Steam listing does not establish DRM for the Epic Games Store or PS5 versions. The reviewed sources also do not establish cross-save, cross-progression, achievement parity, launcher requirements, account linking, mod support, or identical regional availability.
 
 For the current pre-order bonuses and edition overview, see the [Phantom Blade Zero pre-order guide](/guides/phantom-blade-zero-pre-order/). It covers the purchase question without treating a storefront listing as proof of unannounced features.
 
